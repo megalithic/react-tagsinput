@@ -273,7 +273,7 @@
           tags = uniq(tags);
           tags = tags.filter(function (tag) {
             return value.every(function (currentTag) {
-              return _this2._getTagDisplayValue(currentTag) !== _this2._getTagDisplayValue(tag);
+              return _this2._getTagDisplayValue(currentTag).toLowerCase() !== _this2._getTagDisplayValue(tag).toLowerCase();
             });
           });
         }

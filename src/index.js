@@ -183,7 +183,7 @@ class TagsInput extends React.Component {
     if (onlyUnique) {
       tags = uniq(tags)
       tags = tags.filter(tag => value.every(currentTag =>
-        this._getTagDisplayValue(currentTag) !== this._getTagDisplayValue(tag))
+        this._getTagDisplayValue(currentTag).toLowerCase() !== this._getTagDisplayValue(tag).toLowerCase())
       )
     }
 
